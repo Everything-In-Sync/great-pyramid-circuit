@@ -1,0 +1,62 @@
+@media only screen and (max-width: 480px) {
+    .diagram {
+      width: 80%;
+    }
+  }
+
+body{
+    font-family: helvetica, sans-serif;
+}
+.routine{
+    text-align: center;
+    padding-top: 2em;
+}
+.days button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 2em;
+}
+.days button:hover{
+    transition: .2s;
+    transform: scale(1.1);
+}
+.main-details{
+    line-height: 1.5em;
+}
+.example-workouts{
+    text-align: center;
+}
+.align-center{
+    text-align: center;
+}
+.examp-mon{
+    color:purple;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+.left-column {
+    height: 100px;
+    text-align: center;
+  }
+  
+.right-column {
+    height: 100px;
+    text-align: center;
+  }  
