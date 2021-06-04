@@ -3,6 +3,14 @@
       width: 80%;
     }
   }
+  @media only screen and (max-width: 480px){
+      .left-column{
+          padding-left: 0 !important;
+      }
+      .right-column{
+          padding-right: 0 !important;
+      }
+  }
 
 body{
     font-family: helvetica, sans-serif;
@@ -31,9 +39,6 @@ body{
 .align-center{
     text-align: center;
 }
-.examp-mon{
-    color:purple;
-}
 .flex-container{
     display: flex;
     flex-direction: row;
@@ -54,9 +59,11 @@ body{
 .left-column {
     height: 100px;
     text-align: center;
+    padding-left: 50%;
   }
   
 .right-column {
     height: 100px;
     text-align: center;
+    padding-right: 50%;
   }  
