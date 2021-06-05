@@ -28,9 +28,15 @@ function showNav() {
     prevSet.style.display = "inline";
     nextSet.style.display = "inline";
 }
+function hideNext(){
+    nextSet.style.display = "none";
+}
+function hidePrev(){
+    prevSet.style.display = "none";
+}
 
 //MONDAY
-const CircOneWorkoutOne = `<div class="examp-mon">
+const circOneWorkoutOne = `<div class="examp-mon">
 <h2 class="align-center">Chest & Triceps</h2>
 </div>
 <div>
@@ -67,7 +73,7 @@ const CircOneWorkoutOne = `<div class="examp-mon">
 </div>
 </div>
 `;
-const CircOneWorkoutTwo = `<div class="examp-mon">
+const circOneWorkoutTwo = `<div class="examp-mon">
 <h2 class="align-center">Chest & Triceps</h2>
 </div>
 <div>
@@ -104,7 +110,7 @@ const CircOneWorkoutTwo = `<div class="examp-mon">
 </div>
 </div>
 `;
-const CircOneWorkoutThree = `<div class="examp-mon">
+const circOneWorkoutThree = `<div class="examp-mon">
 <h2 class="align-center">Chest & Triceps</h2>
 </div>
 <div>
@@ -141,8 +147,8 @@ const CircOneWorkoutThree = `<div class="examp-mon">
 </div>
 </div>
 `;
-const circuitTwoWorkoutOne = "circuit two";
-const circuitThreeWorkoutOne = "circuit three";
+const circTwoWorkoutOne = "circuit two";
+const circThreeWorkoutOne = "circuit three";
 
 
 let circNum = 0;
@@ -150,18 +156,27 @@ let x = 0;
 
 
 function displayCircOneWorkout() {
-    currentCircuit.innerHTML = CircOneWorkoutOne;
+    currentCircuit.innerHTML = circOneWorkoutOne;
     showNav();
     x = 1;
     circNum = 1;
+    console.log(x);
 }
 
 function displayCircTwoWorkout() {
-    currentCircuit.innerHTML = circuitTwoWorkoutOne;
+    currentCircuit.innerHTML = circTwoWorkoutOne;
+    showNav()
+    // x = 2;
+    circNum = 2;
+    console.log(x);
 }
 
 function displayCircThreeWorkout() {
-    currentCircuit.innerHTML = circuitThreeWorkoutOne;
+    currentCircuit.innerHTML = circThreeWorkoutOne;
+    showNav()
+    // x = 3;
+    circNum = 3;
+    console.log(x);
 }
 
 
@@ -186,12 +201,12 @@ circThree.addEventListener("click", displayCircThreeWorkout)
 function funNextSet() {
     switch (x) {
         case 1:
-            currentCircuit.innerHTML = CircOneWorkoutTwo;
+            currentCircuit.innerHTML = circOneWorkoutTwo;
             x += 1;
             console.log(x);
             break;
         case 2:
-            currentCircuit.innerHTML = CircOneWorkoutThree;
+            currentCircuit.innerHTML = circOneWorkoutThree;
             x += 1;
             console.log(x);
             break;
@@ -201,24 +216,29 @@ function funNextSet() {
 function funPrevSet() {
     switch (x) {
         case 1:
-            currentCircuit.innerHTML = CircOneWorkoutOne;
+            // x -= 1;
+            currentCircuit.innerHTML = circOneWorkoutOne;
             console.log(x);
             break;
+
         case 2:
-            currentCircuit.innerHTML = CircOneWorkoutTwo;
-            console.log(x);
             x -= 1;
+            currentCircuit.innerHTML = circOneWorkoutOne;
+            console.log(x);
+
             break;
         case 3:
-            currentCircuit.innerHTML = CircOneWorkoutThree;
-            console.log(x);
             x -= 1;
+            currentCircuit.innerHTML = circOneWorkoutTwo;
+            console.log(x);
+
             break;
     }
-}
+};
 
 nextSet.addEventListener("click", funNextSet);
 prevSet.addEventListener("click", funPrevSet);
+console.log(x);
 
 // Circuit Switch
 // function switchCircuit() {
