@@ -359,7 +359,6 @@ function funNextSet() {
 function funPrevSet() {
     switch (x) {
         case 1:
-            // x -= 1;
             currentCircuit.innerHTML = circOneWorkoutOne;
             console.log(x);
             break;
@@ -398,3 +397,13 @@ function funPrevSet() {
 nextSet.addEventListener("click", funNextSet);
 prevSet.addEventListener("click", funPrevSet);
 console.log(x);
+
+//a map with an index and the content variables 
+//As the user clicks next or prev it increments, then saves the new number to the variable
+//then checks for the coresponding number in the map
+//then displays that content to the dom
+//without a switch statement so it would pull directly from the map 
+//so a function that would do what...displayContent (x){if x = map index then display content}
+
+//the event listener would listen for the click, then increment every time there is a click
+// if x = y show content
