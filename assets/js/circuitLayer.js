@@ -9,15 +9,11 @@ function clearNav() {
     nextSet.style.display = "none";
 }
 clearNav()
-function clearCircuit() {
-    circOne.style.display = "none";
-    circTwo.style.display = "none";
-    circThree.style.display = "none";
-}
 function showNav() {
     prevSet.style.display = "inline";
     nextSet.style.display = "inline";
 };
+//Circuits
 let circuitOne = [{
         "value": 0,
         "set": "Set One",
@@ -76,7 +72,7 @@ let circuitOne = [{
     },
 ];
 let circuitTwo = [{
-        "value": 0,
+        "value": 8,
         "set": "Set One",
         "workout1": ["Pec Deck Flys", "12 Reps at 100 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "12 Reps at 45 lbs"],
@@ -84,7 +80,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 1,
+        "value": 9,
         "set": "Set Two",
         "workout1": ["Pec Deck Flys", "10 Reps at 120 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "10 Reps at 55 lbs"],
@@ -92,7 +88,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 2,
+        "value": 10,
         "set": "Set Three",
         "workout1": ["Pec Deck Flys", "7 Reps at 135 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "6 Reps at 65 lbs"],
@@ -100,7 +96,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 3,
+        "value": 11,
         "set": "Set Four",
         "workout1": ["Pec Deck Flys", "2 Reps at 155 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "3 Reps at 75 lbs"],
@@ -108,7 +104,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 4,
+        "value": 12,
         "set": "Set Five",
         "workout1": ["Pec Deck Flys", "6 Reps at 135 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "7 Reps at 65 lbs"],
@@ -116,7 +112,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 5,
+        "value": 13,
         "set": "Set Six",
         "workout1": ["Pec Deck Flys", "9 Reps at 120 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "10 Reps at 55 lbs"],
@@ -124,7 +120,7 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
     {
-        "value": 6,
+        "value": 14,
         "set": "Set Seven",
         "workout1": ["Pec Deck Flys", "12 Reps at 100 lbs"],
         "workout2": ["Cable Tricep Pulldowns", "12 Reps at 45 lbs"],
@@ -132,44 +128,125 @@ let circuitTwo = [{
         "cardio": ["Jog in Place", "60 Seconds"],
     },
 ]
-const circTwoWorkoutOne = "circuit two";
-const circThreeWorkoutOne = "circuit three";
+let circuitThree = [{
+        "value": 16,
+        "set": "Set One",
+        "workout1": ["Pushup Rows", "12 Reps at 20 lbs"],
+        "workout2": ["Dips", "12 Reps"],
+        "abs": ["Yoga Ball Situps", "50 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 17,
+        "set": "Set Two",
+        "workout1": ["Pushup Rows", "9 Reps at 25 lbs"],
+        "workout2": ["Dips", "10 Reps"],
+        "abs": ["Yoga Ball Situps", "40 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 18,
+        "set": "Set Three",
+        "workout1": ["Pushup Rows", "7 Reps at 30 lbs"],
+        "workout2": ["Dips", "8 Reps"],
+        "abs": ["Yoga Ball Situps", "30 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 19,
+        "set": "Set Four",
+        "workout1": ["Pushup Rows", "3 Reps at 35 lbs"],
+        "workout2": ["Dips", "3 Reps"],
+        "abs": ["Yoga Ball Situps", "20 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 20,
+        "set": "Set Five",
+        "workout1": ["Pushup Rows", "7 Reps at 30 lbs"],
+        "workout2": ["Dips", "10 Reps"],
+        "abs": ["Yoga Ball Situps", "20 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 21,
+        "set": "Set Six",
+        "workout1": ["Pushup Rows", "10 Reps at 25 lbs"],
+        "workout2": ["Dips", "10 Reps"],
+        "abs": ["Yoga Ball Situps", "15 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+    {
+        "value": 22,
+        "set": "Set Seven",
+        "workout1": ["Pushup Rows", "12 Reps at 20 lbs"],
+        "workout2": ["Dips", "12 Reps"],
+        "abs": ["Yoga Ball Situps", "10 Reps"],
+        "cardio": ["Jumping Jacks", "50"],
+    },
+]
+//Setting the initial value of the numerical variables that will increment
 let circNum = 0;
 let x = 0;
-//On click this will display the circuit that is clicked (layer 1)
-function displayCircOneWorkout() {
-    x = 0;
-    currentCircuit.innerHTML = htmlTemplate;
-    showNav();
-    circNum = 1;
-    console.log(x);
-    console.log(circNum);
-}
-function displayCircTwoWorkout() {
-    x = 7;
-    currentCircuit.innerHTML = "Circuit Two";
-    showNav()
-
-    circNum = 2;
-    console.log(x);
-    console.log(circNum);
-}
-function displayCircThreeWorkout() {
-    currentCircuit.innerHTML = "Circuit Three";
-    showNav()
-    circNum = 3;
-    console.log(x);
-    console.log(circNum);
-}
-
+//Watching for the circuit buttons to be clicked
 circOne.addEventListener("click", displayCircOneWorkout)
 circTwo.addEventListener("click", displayCircTwoWorkout)
 circThree.addEventListener("click", displayCircThreeWorkout)
+//The actions that happen when the previous and next workout buttons are clicked
 function funNextSet() {
-    if (x >= 0 && x <= 5) {
+    if (x >= 0 && x <= 5) { //This stops x from incrementing once it's value is bellow or above the "value" in the circuit arrays
+        x += 1; // increments x every time next button is clicked
+        circuitOne.forEach(classify) // Loops through the first circuit and runs the classify function
+        function classify(element) { // Sets the object values to variables so I can interpolate into the html template
+            if (x === element.value) {
+                set = element.set;
+                workout1 = element.workout1;
+                workout2 = element.workout2;
+                abs = element.abs;
+                cardio = element.cardio;
+            }
+        }
+        let htmlTemplate = `
+            <div class="examp-mon">
+                <h2 class="align-center">Chest & Triceps</h2>
+            </div>
+            <div class ="align-center">
+                <h3 class= "index">${set}</h3>
+            <div>
+            <div class="row">
+                <div class="column">
+                    <div class="left-column">
+                        <p>
+                            ${workout1[0]}
+                            <br>
+                            ${abs[0]}
+                            <br>
+                            ${workout2[0]}
+                            <br>
+                            ${cardio[0]}
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="right-column">
+                        <p>
+                            ${workout1[1]}
+                            <br>
+                            ${abs[1]}
+                            <br>
+                            ${workout2[1]}
+                            <br>
+                            ${cardio[1]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+`;
+        currentCircuit.innerHTML = htmlTemplate;
+        return x;
+    } else if (x >= 7 && x <= 13) { //These numbers connect to the "value" values in each object. Same as above, preventing incrementing outside of the range
         x += 1;
-        console.log(x)
-        circuitOne.forEach(classify)
+        circuitTwo.forEach(classify)
         function classify(element) {
             if (x === element.value) {
                 set = element.set;
@@ -216,16 +293,64 @@ function funNextSet() {
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        console.log(workout1)
+        return x;
+    } else if (x >= 15 && x <= 21) {
+        x += 1;
+        circuitThree.forEach(classify)
+        function classify(element) {
+            if (x === element.value) {
+                set = element.set;
+                workout1 = element.workout1;
+                workout2 = element.workout2;
+                abs = element.abs;
+                cardio = element.cardio;
+            }
+        }
+        let htmlTemplate = `
+            <div class="examp-mon">
+                <h2 class="align-center">Chest & Triceps</h2>
+            </div>
+            <div class ="align-center">
+                <h3 class= "index">${set}</h3>
+            <div>
+            <div class="row">
+                <div class="column">
+                    <div class="left-column">
+                        <p>
+                            ${workout1[0]}
+                            <br>
+                            ${abs[0]}
+                            <br>
+                            ${workout2[0]}
+                            <br>
+                            ${cardio[0]}
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="right-column">
+                        <p>
+                            ${workout1[1]}
+                            <br>
+                            ${abs[1]}
+                            <br>
+                            ${workout2[1]}
+                            <br>
+                            ${cardio[1]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+`;
+        currentCircuit.innerHTML = htmlTemplate;
         return x;
     } else {
         return x;
     }
 }
-function funPrevSet() {
+function funPrevSet() { //Same as above except this is decrementing whenever the previous workout button is clicked
     if (x >= 1 && x <= 6) {
         x -= 1;
-        console.log(x)
         circuitOne.forEach(classify)
         function classify(element) {
             if (x === element.value) {
@@ -273,7 +398,106 @@ function funPrevSet() {
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        console.log(workout1)
+        return x;
+    } else if (x >= 9 && x <= 14) {
+        x -= 1;
+        circuitTwo.forEach(classify)
+        function classify(element) {
+            if (x === element.value) {
+                set = element.set;
+                workout1 = element.workout1;
+                workout2 = element.workout2;
+                abs = element.abs;
+                cardio = element.cardio;
+            }
+        }
+        let htmlTemplate = `
+            <div class="examp-mon">
+                <h2 class="align-center">Chest & Triceps</h2>
+            </div>
+            <div class ="align-center">
+                <h3 class= "index">${set}</h3>
+            <div>
+            <div class="row">
+                <div class="column">
+                    <div class="left-column">
+                        <p>
+                            ${workout1[0]}
+                            <br>
+                            ${abs[0]}
+                            <br>
+                            ${workout2[0]}
+                            <br>
+                            ${cardio[0]}
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="right-column">
+                        <p>
+                            ${workout1[1]}
+                            <br>
+                            ${abs[1]}
+                            <br>
+                            ${workout2[1]}
+                            <br>
+                            ${cardio[1]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+`;
+        currentCircuit.innerHTML = htmlTemplate;
+        return x;
+    } else if (x >= 17 && x <= 22) {
+        x -= 1;
+        circuitThree.forEach(classify)
+        function classify(element) {
+            if (x === element.value) {
+                set = element.set;
+                workout1 = element.workout1;
+                workout2 = element.workout2;
+                abs = element.abs;
+                cardio = element.cardio;
+            }
+        }
+        let htmlTemplate = `
+            <div class="examp-mon">
+                <h2 class="align-center">Chest & Triceps</h2>
+            </div>
+            <div class ="align-center">
+                <h3 class= "index">${set}</h3>
+            <div>
+            <div class="row">
+                <div class="column">
+                    <div class="left-column">
+                        <p>
+                            ${workout1[0]}
+                            <br>
+                            ${abs[0]}
+                            <br>
+                            ${workout2[0]}
+                            <br>
+                            ${cardio[0]}
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="right-column">
+                        <p>
+                            ${workout1[1]}
+                            <br>
+                            ${abs[1]}
+                            <br>
+                            ${workout2[1]}
+                            <br>
+                            ${cardio[1]}
+                        </p>
+                    </div>
+                </div>
+            </div>
+`;
+        currentCircuit.innerHTML = htmlTemplate;
         return x;
     } else {
         return x;
@@ -281,51 +505,159 @@ function funPrevSet() {
 }
 nextSet.addEventListener("click", funNextSet);
 prevSet.addEventListener("click", funPrevSet);
-console.log(x);
-circuitOne.forEach(classify)
-function classify(element) {
-    if (x === element.value) {
-        set = element.set;
-        workout1 = element.workout1;
-        workout2 = element.workout2;
-        abs = element.abs;
-        cardio = element.cardio;
+function displayCircOneWorkout() { //These display the initial circuits
+    x = 0;
+    showNav();
+    circNum = 1;
+    circuitOne.forEach(classify)
+    function classify(element) {
+        if (x === element.value) {
+            set = element.set;
+            workout1 = element.workout1;
+            workout2 = element.workout2;
+            abs = element.abs;
+            cardio = element.cardio;
+        }
     }
+    let htmlTemplate = `
+    <div class="examp-mon">
+        <h2 class="align-center">Chest & Triceps</h2>
+    </div>
+    <div class ="align-center">
+        <h3 class= "index">${set}</h3>
+    <div>
+    <div class="row">
+        <div class="column">
+            <div class="left-column">
+                <p>
+                    ${workout1[0]}
+                    <br>
+                    ${abs[0]}
+                    <br>
+                    ${workout2[0]}
+                    <br>
+                    ${cardio[0]}
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="right-column">
+                <p>
+                    ${workout1[1]}
+                    <br>
+                    ${abs[1]}
+                    <br>
+                    ${workout2[1]}
+                    <br>
+                    ${cardio[1]}
+                </p>
+            </div>
+        </div>
+    </div>
+    `;
+    currentCircuit.innerHTML = htmlTemplate;
 }
-console.log(workout1)
-let htmlTemplate = `
-<div class="examp-mon">
-    <h2 class="align-center">Chest & Triceps</h2>
-</div>
-<div class ="align-center">
-    <h3 class= "index">${set}</h3>
-<div>
-<div class="row">
-    <div class="column">
-        <div class="left-column">
-            <p>
-                ${workout1[0]}
-                <br>
-                ${abs[0]}
-                <br>
-                ${workout2[0]}
-                <br>
-                ${cardio[0]}
-            </p>
+function displayCircTwoWorkout() {
+    x = 8;
+    showNav();
+    circNum = 2;
+    circuitTwo.forEach(classify)
+    function classify(element) {
+        if (x === element.value) {
+            set = element.set;
+            workout1 = element.workout1;
+            workout2 = element.workout2;
+            abs = element.abs;
+            cardio = element.cardio;
+        }
+    }
+    let htmlTemplate = `
+    <div class="examp-mon">
+        <h2 class="align-center">Chest & Triceps</h2>
+    </div>
+    <div class ="align-center">
+        <h3 class= "index">${set}</h3>
+    <div>
+    <div class="row">
+        <div class="column">
+            <div class="left-column">
+                <p>
+                    ${workout1[0]}
+                    <br>
+                    ${abs[0]}
+                    <br>
+                    ${workout2[0]}
+                    <br>
+                    ${cardio[0]}
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="right-column">
+                <p>
+                    ${workout1[1]}
+                    <br>
+                    ${abs[1]}
+                    <br>
+                    ${workout2[1]}
+                    <br>
+                    ${cardio[1]}
+                </p>
+            </div>
         </div>
     </div>
-    <div class="column">
-        <div class="right-column">
-            <p>
-                ${workout1[1]}
-                <br>
-                ${abs[1]}
-                <br>
-                ${workout2[1]}
-                <br>
-                ${cardio[1]}
-            </p>
+    `;
+    currentCircuit.innerHTML = htmlTemplate;
+}
+function displayCircThreeWorkout() {
+    x = 16;
+    showNav();
+    circNum = 3;
+    circuitThree.forEach(classify)
+    function classify(element) {
+        if (x === element.value) {
+            set = element.set;
+            workout1 = element.workout1;
+            workout2 = element.workout2;
+            abs = element.abs;
+            cardio = element.cardio;
+        }
+    }
+    let htmlTemplate = `
+    <div class="examp-mon">
+        <h2 class="align-center">Chest & Triceps</h2>
+    </div>
+    <div class ="align-center">
+        <h3 class= "index">${set}</h3>
+    <div>
+    <div class="row">
+        <div class="column">
+            <div class="left-column">
+                <p>
+                    ${workout1[0]}
+                    <br>
+                    ${abs[0]}
+                    <br>
+                    ${workout2[0]}
+                    <br>
+                    ${cardio[0]}
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="right-column">
+                <p>
+                    ${workout1[1]}
+                    <br>
+                    ${abs[1]}
+                    <br>
+                    ${workout2[1]}
+                    <br>
+                    ${cardio[1]}
+                </p>
+            </div>
         </div>
     </div>
-</div>
-`;
+    `;
+    currentCircuit.innerHTML = htmlTemplate;
+}
