@@ -1,15 +1,9 @@
-const array = [
-    {
-        "name": "rob",
-        "age": 29,
-        "eyes": "blue",
-    },
-    {
-        "name": "mayra",
-        "age": 28,
-        "eyes": "brown",
-    }
-];
+something = 0;
+function changeSomething(){
+    something = something +1
+}
+changeSomething()
+console.log(something)
 
 // console.log(array[0].name)
 
@@ -21,5 +15,3 @@ const array = [
 // array.forEach(displayNames(0))
 
 
-const names = array.map(item => item.name)
-console.log(names)
