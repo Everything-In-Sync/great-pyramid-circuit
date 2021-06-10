@@ -14,10 +14,22 @@
 
 body{
     font-family: helvetica, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .routine{
     text-align: center;
     padding-top: 2em;
+}
+.btn-spacing{
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.nav-buttons{
+    padding-top: 1.5em;
 }
 .days button{
     border: none;
@@ -25,13 +37,44 @@ body{
     font-size: 20px;
     cursor: pointer;
     line-height: 2em;
+    border-style: solid;
+    margin-top: 15px;
+    margin-left:.5em;
+    margin-right: .5em;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #280067;
+    color: #cd9b1c;
 }
 .days button:hover{
     transition: .2s;
     transform: scale(1.1);
 }
+.nav-buttons button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 2em;
+    border-style: solid;
+    margin-top: 15px;
+    margin-left:.5em;
+    margin-right: .5em;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #cd9b1c;
+    color: #280067;
+}
+.nav-buttons button:hover{
+    transition: .2s;
+    transform: scale(1.1);
+}
 .main-details{
     line-height: 1.5em;
+    background-color: #280067;
+    color:#cd9b1c;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .example-circuits{
     text-align: center;

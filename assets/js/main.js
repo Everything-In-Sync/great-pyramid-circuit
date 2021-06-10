@@ -134,7 +134,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "12 Reps at 20 lbs"],
         "workout2": ["Dips", "12 Reps"],
         "abs": ["Yoga Ball Situps", "50 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 17,
@@ -142,7 +142,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "9 Reps at 25 lbs"],
         "workout2": ["Dips", "10 Reps"],
         "abs": ["Yoga Ball Situps", "40 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 18,
@@ -150,7 +150,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "7 Reps at 30 lbs"],
         "workout2": ["Dips", "8 Reps"],
         "abs": ["Yoga Ball Situps", "30 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 19,
@@ -158,7 +158,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "3 Reps at 35 lbs"],
         "workout2": ["Dips", "3 Reps"],
         "abs": ["Yoga Ball Situps", "20 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 20,
@@ -166,7 +166,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "7 Reps at 30 lbs"],
         "workout2": ["Dips", "10 Reps"],
         "abs": ["Yoga Ball Situps", "20 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 21,
@@ -174,7 +174,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "10 Reps at 25 lbs"],
         "workout2": ["Dips", "10 Reps"],
         "abs": ["Yoga Ball Situps", "15 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
     {
         "value": 22,
@@ -182,7 +182,7 @@ let circuitThree = [{
         "workout1": ["Pushup Rows", "12 Reps at 20 lbs"],
         "workout2": ["Dips", "12 Reps"],
         "abs": ["Yoga Ball Situps", "10 Reps"],
-        "cardio": ["Jumping Jacks", "50"],
+        "cardio": ["High Knees", "50 Reps"],
     },
 ]
 //Setting the initial value of the numerical variables that will increment
