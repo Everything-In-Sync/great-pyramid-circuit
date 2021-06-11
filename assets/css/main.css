@@ -36,6 +36,14 @@ body{
 h1{
     font-family: granite, helvetica, sans-serif;
 }
+.top{
+    text-align: right;
+    position:sticky;
+    margin-right: 15px;
+}
+.dm-toggle-text{
+    margin-right: 8px;
+}
 .example-circuits{
     font-family: granite, helvetica, sans-serif;
 }

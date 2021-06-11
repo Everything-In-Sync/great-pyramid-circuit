@@ -133,3 +133,38 @@ function getInfo(){
 
   console.log(info.sex)
 }
+
+//Look into this as well
+// let info = {};
+// let calculateBtn = document.getElementById('calcBtn');
+// calculateBtn.addEventListener("click", getValues);
+
+// function getInputArray() {
+//   let inputsArray = [];
+//   let fields = document.querySelectorAll('input[data-type]');
+//   fields.forEach(field =>
+//                 inputsArray.push(field.dataset.type))
+//   return inputsArray
+// }
+
+// function getValue(input) {
+//   let value = document.querySelector(`.${input}`).value;
+//   return {[input]: value}
+// }
+
+// function getValues() {
+//   let inputsArray = getInputArray();
+//   inputsArray.forEach(input =>
+//       Object.assign(info, getValue(input)))
+//   console.log(info);
+// }
+{/* <form>
+  <input class="sex" data-type="sex" type="text"></input>
+  <input class="age" data-type="age" type="text"></input>
+  <input class="feet" data-type="feet" type="text"></input>
+  <input class="inches" data-type="inches" type="text"></input> 
+  <input class="weight" data-type="weight" type="text"></input>
+  <input class="goal" data-type="goal" type="text"></input>
+  <input class="activity" data-type="activity" type="text"></input>
+</form>
+<button id="calcBtn">Calculate</button> */
