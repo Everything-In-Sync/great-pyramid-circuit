@@ -2,6 +2,7 @@ let toggle = document.querySelector(".toggle");
 let toggleText = document.querySelector(".toggle-text").innerHTML;
 let body = document.querySelector("body");
 let circ = document.querySelector(".toggle-circ");
+let img = document.querySelector(".diagram");
 let toggleCount = 0;
 
 toggle.addEventListener("click", toggleMode);
@@ -14,6 +15,7 @@ function toggleMode(){
         toggleText = document.querySelector(".toggle-text");
         toggleText.innerHTML = "Light Mode"
         circ.style.left = "50px";
+        img.src = "assets/images/diagramDark.png";
     }
     else if (toggleText == "Light Mode"){
         toggleCount -= 1;
@@ -22,6 +24,7 @@ function toggleMode(){
         toggleText = document.querySelector(".toggle-text");
         toggleText.innerHTML = "Dark Mode"
         circ.style.left = "5px";
+        img.src = "assets/images/diagramLight.png";
     }
 };
 

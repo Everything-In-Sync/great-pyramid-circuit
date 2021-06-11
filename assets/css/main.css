@@ -44,6 +44,9 @@ h1{
 .dm-toggle-text{
     margin-right: 8px;
 }
+.section{
+    padding-bottom:1.5em;
+}
 .example-circuits{
     font-family: granite, helvetica, sans-serif;
 }
@@ -109,12 +112,12 @@ h1{
     transition: .2s;
     transform: scale(1.1);
 }
-.main-details{
+.alt-section{
     line-height: 1.5em;
     background-color: #280067;
     color:#cd9b1c;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 .example-circuits{
     text-align: center;
