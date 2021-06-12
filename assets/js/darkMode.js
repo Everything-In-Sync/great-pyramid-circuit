@@ -4,7 +4,7 @@ let body = document.querySelector("body");
 let circ = document.querySelector(".toggle-circ");
 let img = document.querySelector(".diagram");
 let toggleCount = 0;
-
+//if body.background color = white
 toggle.addEventListener("click", toggleMode);
 function toggleMode(){
     let toggleText = document.querySelector(".toggle-text").innerHTML

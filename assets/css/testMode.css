@@ -1,10 +1,16 @@
-/* .toggle-text{
-    position:absolute;
-    top: 7.5px;
-    right: 85px;
-} */
+/* NEW CSS */
 .top{
-    padding-right:20px;
+
+}
+.lm-text{
+    position: absolute;
+    top: 6px;
+    right: 170px;
+}
+.dm-text{
+    position: absolute;
+    top: 5.6px;
+    right: 10px;
 }
 .toggle {
     background:0;
@@ -13,9 +19,48 @@
     cursor: pointer;
     height: 30px;
     width: 80px;
-    position: relative;
+    position: absolute;
+    right: 85px;
     border: 1px solid rgba(255,255,255,0);
 }
+/* .lm-text{
+    position: absolute;
+    top: 7.5px;
+    right: 160px;
+}
+.dm-text{
+    position: absolute;
+    top: 7.5px;
+    right:15px;
+}
+.toggle {
+    background:0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    right: 65px;
+    border: 1px solid rgba(255,255,255,0);
+} */
+
+
+/* .toggle-text{
+    position:absolute;
+    top: 7.5px;
+    right: 85px;
+} */
+/* .toggle {
+    background:0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0);
+} */
 
 .toggle:focus {
     outline:none; /* Not ideal for accessibility */
