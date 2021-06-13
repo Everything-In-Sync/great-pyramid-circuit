@@ -1,31 +1,37 @@
+/* Mobile */
 @media only screen and (max-width: 480px) {
     .diagram {
-      width: 80%;
+        width: 80%;
     }
-  }
-  @media only screen and (max-width: 480px){
-      .left-column{
-          padding-left: 0px !important;
-      }
-      .right-column{
-          padding-right: 0px !important;
-      }
-      .alt-section{
-          padding-left: 10px;
-          padding-right: 10px;
-      }
-      .title{
-          padding-left: 10px;
-          padding-right: 10px;
-      }
-  }
-  @font-face {
+}
+@media only screen and (max-width: 480px) {
+    .left-column {
+        padding-left: 0px !important;
+    }
+    .right-column {
+        padding-right: 0px !important;
+    }
+    .alt-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .title {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@font-face {
     font-family: "granite";
     src: url("../fonts/Granite-Bgvl.ttf");
-  } 
-
-body{
-    /* font-family: helvetica, sans-serif; */
+}
+/* Mobile */
+/* Agnostic Classes */
+.align-center {
+    text-align: center;
+}
+/* Agnostic Classes */
+/* Main  */
+body {
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     margin-top: 2%;
@@ -33,36 +39,15 @@ body{
     margin-left: 0px;
     margin-right: 0px;
 }
-h1{
+h1 {
     font-family: granite, helvetica, sans-serif;
 }
-.top{
-    text-align: right;
-    position:sticky;
-    margin-right: 15px;
-}
-.dm-toggle-text{
-    margin-right: 8px;
-}
-.section{
-    padding-bottom:1.5em;
-}
-.example-circuits{
-    font-family: granite, helvetica, sans-serif;
-}
-.routine{
-    text-align: center;
-    padding-top: 2em;
-}
-.btn-spacing{
-    display: inline;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-.nav-buttons{
+/* Main */
+/* Circuit and Workout Navigation */
+.nav-buttons {
     padding-top: 1.5em;
 }
-.days button{
+.nav-buttons button {
     width: 140px;
     border: none;
     background-color: white;
@@ -72,7 +57,7 @@ h1{
     border-style: solid;
     border-width: 2px;
     margin-top: 15px;
-    margin-left:.5em;
+    margin-left: .5em;
     margin-right: .5em;
     padding-top: .1px;
     padding-bottom: .1px;
@@ -81,51 +66,44 @@ h1{
     background-color: #280067;
     color: #cd9b1c;
 }
-.days button:hover{
-    transition: .2s;
-    transform: scale(1.1);
-}
-.nav-buttons{
+.nav-buttons {
     width: 100%;
     table-layout: fixed;
 }
-.nav-buttons button{
-    width: 140px;
-    border: none;
-    background-color: white;
-    font-size: 20px;
-    cursor: pointer;
-    line-height: 2em;
-    border-style: solid;
-    border-width: 2px;
-    margin-top: 15px;
-    margin-left:.5em;
-    margin-right: .5em;
-    padding-top: .1px;
-    padding-bottom: .1px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: #280067;
-    color: #cd9b1c;
-}
-.nav-buttons button:hover{
+.nav-buttons button:hover {
     transition: .2s;
     transform: scale(1.1);
 }
-.alt-section{
+/* Circuit and Workout Navigation */
+/* Dark/Light Mode Toggle */
+.dm-toggle-text {
+    margin-right: 8px;
+}
+/* Dark/Light Mode Toggle */
+/* Structure */
+.top {
+    text-align: right;
+    position: sticky;
+    margin-right: 15px;
+}
+.section {
+    padding-bottom: 1.5em;
+}
+.example-circuits {
+    font-family: granite, helvetica, sans-serif;
+}
+.routine {
+    text-align: center;
+    padding-top: 2em;
+}
+.alt-section {
     line-height: 1.5em;
     background-color: #280067;
-    color:#cd9b1c;
+    color: #cd9b1c;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
 }
-.example-circuits{
-    text-align: center;
-}
-.align-center{
-    text-align: center;
-}
-.flex-container{
+.flex-container {
     display: flex;
     flex-direction: row;
 }
@@ -134,25 +112,55 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-  }
-  
+}
 .column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-  }
+}
 .left-column {
     height: 100px;
     text-align: center;
     padding-left: 50%;
-  }
-  
+}
 .right-column {
     height: 100px;
     text-align: center;
     padding-right: 50%;
-  }  
-td{
-    width: 100%;
+}
+/* Structure */
+/* Circuits */
+.circuits button {
+    width: 140px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 2em;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 15px;
+    margin-left: .5em;
+    margin-right: .5em;
+    padding-top: .1px;
+    padding-bottom: .1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #280067;
+    color: #cd9b1c;
+}
+.circuits button:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+.example-circuits {
+    text-align: center;
+}
+/* Circuits */
+/* FIX THIS - proper classes */
+.btn-spacing {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
 }
