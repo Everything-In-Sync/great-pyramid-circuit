@@ -29,6 +29,11 @@
 .align-center {
     text-align: center;
 }
+.btn-spacing {
+    display: inline;
+    padding-left: 1em;
+    padding-right: 1em;
+}
 /* Agnostic Classes */
 /* Main  */
 body {
@@ -159,8 +164,3 @@ h1 {
 }
 /* Circuits */
 /* FIX THIS - proper classes */
-.btn-spacing {
-    display: inline;
-    padding-left: 1em;
-    padding-right: 1em;
-}
