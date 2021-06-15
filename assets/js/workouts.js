@@ -187,18 +187,18 @@ let circuitThree = [{
 ]
 //Setting the initial value of the numerical variables that will increment
 let circNum = 0;
-let x = 0;
+let place = 0;
 //Watching for the circuit buttons to be clicked
 circOne.addEventListener("click", displayCircOneWorkout)
 circTwo.addEventListener("click", displayCircTwoWorkout)
 circThree.addEventListener("click", displayCircThreeWorkout)
 //The actions that happen when the previous and next workout buttons are clicked
 function funNextSet() {
-    if (x >= 0 && x <= 5) { //This stops x from incrementing once it's value is bellow or above the "value" in the circuit arrays
-        x += 1; // increments x every time next button is clicked
+    if (place >= 0 && place <= 5) { //This stops x from incrementing once it's value is bellow or above the "value" in the circuit arrays
+        place += 1; // increments x every time next button is clicked
         circuitOne.forEach(classify) // Loops through the first circuit and runs the classify function
         function classify(element) { // Sets the object values to variables so I can interpolate into the html template
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -243,12 +243,12 @@ function funNextSet() {
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
-    } else if (x >= 7 && x <= 13) { //These numbers connect to the "value" values in each object. Same as above, preventing incrementing outside of the range
-        x += 1;
+        return place;
+    } else if (place >= 7 && place <= 13) { //These numbers connect to the "value" values in each object. Same as above, preventing incrementing outside of the range
+        place += 1;
         circuitTwo.forEach(classify)
         function classify(element) {
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -293,12 +293,12 @@ function funNextSet() {
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
-    } else if (x >= 15 && x <= 21) {
-        x += 1;
+        return place;
+    } else if (place >= 15 && place <= 21) {
+        place += 1;
         circuitThree.forEach(classify)
         function classify(element) {
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -343,17 +343,17 @@ function funNextSet() {
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
+        return place;
     } else {
-        return x;
+        return place;
     }
 }
 function funPrevSet() { //Same as above except this is decrementing whenever the previous workout button is clicked
-    if (x >= 1 && x <= 6) {
-        x -= 1;
+    if (place >= 1 && place <= 6) {
+        place -= 1;
         circuitOne.forEach(classify)
         function classify(element) {
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -398,12 +398,12 @@ function funPrevSet() { //Same as above except this is decrementing whenever the
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
-    } else if (x >= 9 && x <= 14) {
-        x -= 1;
+        return place;
+    } else if (place >= 9 && place <= 14) {
+        place -= 1;
         circuitTwo.forEach(classify)
         function classify(element) {
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -448,12 +448,12 @@ function funPrevSet() { //Same as above except this is decrementing whenever the
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
-    } else if (x >= 17 && x <= 22) {
-        x -= 1;
+        return place;
+    } else if (place >= 17 && place <= 22) {
+        place -= 1;
         circuitThree.forEach(classify)
         function classify(element) {
-            if (x === element.value) {
+            if (place === element.value) {
                 set = element.set;
                 workout1 = element.workout1;
                 workout2 = element.workout2;
@@ -498,20 +498,20 @@ function funPrevSet() { //Same as above except this is decrementing whenever the
             </div>
 `;
         currentCircuit.innerHTML = htmlTemplate;
-        return x;
+        return place;
     } else {
-        return x;
+        return place;
     }
 }
 nextSet.addEventListener("click", funNextSet);
 prevSet.addEventListener("click", funPrevSet);
 function displayCircOneWorkout() { //These display the initial circuits
-    x = 0;
+    place = 0;
     showNav();
     circNum = 1;
     circuitOne.forEach(classify)
     function classify(element) {
-        if (x === element.value) {
+        if (place === element.value) {
             set = element.set;
             workout1 = element.workout1;
             workout2 = element.workout2;
@@ -558,12 +558,12 @@ function displayCircOneWorkout() { //These display the initial circuits
     currentCircuit.innerHTML = htmlTemplate;
 }
 function displayCircTwoWorkout() {
-    x = 8;
+    place = 8;
     showNav();
     circNum = 2;
     circuitTwo.forEach(classify)
     function classify(element) {
-        if (x === element.value) {
+        if (place === element.value) {
             set = element.set;
             workout1 = element.workout1;
             workout2 = element.workout2;
@@ -610,12 +610,12 @@ function displayCircTwoWorkout() {
     currentCircuit.innerHTML = htmlTemplate;
 }
 function displayCircThreeWorkout() {
-    x = 16;
+    place = 16;
     showNav();
     circNum = 3;
     circuitThree.forEach(classify)
     function classify(element) {
-        if (x === element.value) {
+        if (place === element.value) {
             set = element.set;
             workout1 = element.workout1;
             workout2 = element.workout2;
